@@ -31,3 +31,27 @@ npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-
 ```
 npm install react react-dom
 ```
+
+<h2>Typescript導入</h2>
+<h3>パッケージのインストール</h3>
+
+```
+$npm install typescript -g
+$tsc --init　
+```
+tscコマンドを打った時に読まれる設定ファイルの初期化
+```
+$ tsc --init
+
+Created a new tsconfig.json with:                                                                                       
+                                                                                                                     TS 
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+
+
+You can learn more at https://aka.ms/tsconfig.json
+```
