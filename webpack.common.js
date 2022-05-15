@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   //最初に見るファイルを指定
-  entry: path.join(__dirname, "src/public", "index.js"),
+  entry: path.join(__dirname, "src/public", "index.tsx"),
   //出力されたファイル設定
   output: {
     //出力されるファイル名
@@ -23,13 +23,10 @@ module.exports = {
     rules: [
       {
         //扱うファイル
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         //ファイルに対して何かをする
         use: {
           loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
         },
         exclude: /node_modules/,
       },
@@ -37,7 +34,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, "node_modules")],
-    extensions: [".jsx", ".js"],
+    extensions: [".tsx", ".js"],
   },
   stats: {
     errorDetails: true,
